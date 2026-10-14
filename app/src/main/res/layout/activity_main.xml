@@ -1,102 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+    android:orientation="vertical"
     android:background="#F3F6FC">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_245"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:minHeight="64dp"
+        android:background="#173B70"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="QUẢN LÝ CHI TIÊU CÁ NHÂN"
-            android:textColor="#173B70"
-            android:textSize="24sp"
-            android:textStyle="bold"
             android:gravity="center"
-            android:paddingBottom="8dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ghi lại các khoản chi của bạn"
-            android:textSize="15sp"
-            android:textColor="#667085"
-            android:gravity="center"
-            android:paddingBottom="24dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tên khoản chi"
+            android:padding="6dp"
+            android:text="Nguyễn Thị Bích Tiên - 2415053122245 - Quản lý chi tiêu cá nhân"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
             android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#263448" />
+            android:maxLines="2" />
 
-        <EditText
-            android:id="@+id/edtTenKhoanChi_245"
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ví dụ: Ăn sáng"
-            android:inputType="textCapSentences"
-            android:singleLine="true"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="16dp" />
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Số tiền (VNĐ)"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#263448" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QUẢN LÝ CHI TIÊU CÁ NHÂN"
+                android:textColor="#173B70"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingBottom="8dp" />
 
-        <EditText
-            android:id="@+id/edtSoTien_245"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nhập số tiền"
-            android:inputType="numberDecimal"
-            android:singleLine="true"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ghi lại các khoản chi của bạn"
+                android:textSize="15sp"
+                android:textColor="#667085"
+                android:gravity="center"
+                android:paddingBottom="24dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ghi chú"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#263448" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên khoản chi"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#263448" />
 
-        <EditText
-            android:id="@+id/edtGhiChu_245"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nhập ghi chú (không bắt buộc)"
-            android:inputType="textCapSentences|textMultiLine"
-            android:minLines="2"
-            android:gravity="top"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="24dp" />
+            <EditText
+                android:id="@+id/edtTenKhoanChi_245"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ví dụ: Ăn sáng"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp" />
 
-        <Button
-            android:id="@+id/btnThemKhoanChi_245"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Thêm khoản chi" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số tiền (VNĐ)"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#263448" />
 
-        <Button
-            android:id="@+id/btnXemChiTiet_245"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Xem chi tiết khoản chi"
-            android:layout_marginTop="12dp" />
+            <EditText
+                android:id="@+id/edtSoTien_245"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập số tiền"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp" />
 
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ghi chú"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#263448" />
+
+            <EditText
+                android:id="@+id/edtGhiChu_245"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập ghi chú (không bắt buộc)"
+                android:inputType="textCapSentences|textMultiLine"
+                android:minLines="2"
+                android:gravity="top"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnThemKhoanChi_245"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thêm khoản chi" />
+
+            <Button
+                android:id="@+id/btnXemChiTiet_245"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xem chi tiết khoản chi"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

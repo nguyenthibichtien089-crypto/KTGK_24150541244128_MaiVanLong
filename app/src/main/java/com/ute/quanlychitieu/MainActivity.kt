@@ -36,40 +36,40 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.btnXemChiTiet_245)
 
         btnThemKhoanChi_245.setOnClickListener {
-            themKhoanChi()
+            themKhoanChi_245()
         }
 
         btnXemChiTiet_245.setOnClickListener {
-            xemChiTietKhoanChi()
+            xemChiTietKhoanChi_245()
         }
     }
 
-    private fun themKhoanChi() {
-        val tenKhoanChi =
+    private fun themKhoanChi_245() {
+        val tenKhoanChi_245 =
             edtTenKhoanChi_245.text.toString().trim()
 
-        val soTienText =
+        val soTienText_245 =
             edtSoTien_245.text.toString().trim()
 
-        if (tenKhoanChi.isEmpty()) {
+        if (tenKhoanChi_245.isEmpty()) {
             edtTenKhoanChi_245.error =
                 "Vui lòng nhập tên khoản chi"
             edtTenKhoanChi_245.requestFocus()
             return
         }
 
-        if (soTienText.isEmpty()) {
+        if (soTienText_245.isEmpty()) {
             edtSoTien_245.error =
                 "Vui lòng nhập số tiền"
             edtSoTien_245.requestFocus()
             return
         }
 
-        val soTien = soTienText.toDoubleOrNull()
+        val soTien_245 = soTienText_245.toDoubleOrNull()
 
-        if (soTien == null ||
-            !soTien.isFinite() ||
-            soTien <= 0
+        if (soTien_245 == null ||
+            !soTien_245.isFinite() ||
+            soTien_245 <= 0
         ) {
             edtSoTien_245.error =
                 "Số tiền phải là số lớn hơn 0"
@@ -84,28 +84,28 @@ class MainActivity : AppCompatActivity() {
         ).show()
     }
 
-    private fun xemChiTietKhoanChi() {
-        val tenKhoanChi =
+    private fun xemChiTietKhoanChi_245() {
+        val tenKhoanChi_245 =
             edtTenKhoanChi_245.text.toString().trim()
 
-        val soTienText =
+        val soTienText_245 =
             edtSoTien_245.text.toString().trim()
 
-        val ghiChu =
+        val ghiChu_245 =
             edtGhiChu_245.text.toString().trim()
 
-        if (tenKhoanChi.isEmpty()) {
+        if (tenKhoanChi_245.isEmpty()) {
             edtTenKhoanChi_245.error =
                 "Vui lòng nhập tên khoản chi"
             edtTenKhoanChi_245.requestFocus()
             return
         }
 
-        val soTien = soTienText.toDoubleOrNull()
+        val soTien_245 = soTienText_245.toDoubleOrNull()
 
-        if (soTien == null ||
-            !soTien.isFinite() ||
-            soTien <= 0
+        if (soTien_245 == null ||
+            !soTien_245.isFinite() ||
+            soTien_245 <= 0
         ) {
             edtSoTien_245.error =
                 "Vui lòng nhập số tiền hợp lệ lớn hơn 0"
@@ -113,15 +113,15 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val intent = Intent(
+        val intent_245 = Intent(
             this,
             ChiTietChiTieuActivity::class.java
         ).apply {
-            putExtra("TEN_KHOAN_CHI", tenKhoanChi)
-            putExtra("SO_TIEN", soTien)
-            putExtra("GHI_CHU", ghiChu)
+            putExtra("TEN_KHOAN_CHI", tenKhoanChi_245)
+            putExtra("SO_TIEN", soTien_245)
+            putExtra("GHI_CHU", ghiChu_245)
         }
 
-        startActivity(intent)
+        startActivity(intent_245)
     }
 }

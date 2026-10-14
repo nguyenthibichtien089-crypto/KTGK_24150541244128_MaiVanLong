@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:padding="24dp">
 
+        <!-- Tiêu đề màn hình -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,29 +22,36 @@
             android:gravity="center"
             android:paddingBottom="24dp" />
 
+        <!-- Nhãn tên khoản chi -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tên khoản chi"
             android:textStyle="bold"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="#263448" />
 
+        <!-- Giá trị tên khoản chi -->
         <TextView
             android:id="@+id/txtTenKhoanChi_245"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Chưa có dữ liệu"
             android:textSize="18sp"
+            android:textColor="#263448"
             android:paddingTop="8dp"
             android:paddingBottom="20dp" />
 
+        <!-- Nhãn số tiền -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Số tiền"
             android:textStyle="bold"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="#263448" />
 
+        <!-- Giá trị số tiền -->
         <TextView
             android:id="@+id/txtSoTien_245"
             android:layout_width="match_parent"
@@ -55,22 +63,35 @@
             android:paddingTop="8dp"
             android:paddingBottom="20dp" />
 
+        <!-- Nhãn ghi chú -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ghi chú"
             android:textStyle="bold"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="#263448" />
 
+        <!-- Giá trị ghi chú -->
         <TextView
             android:id="@+id/txtGhiChu_245"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Không có ghi chú"
             android:textSize="16sp"
+            android:textColor="#263448"
             android:paddingTop="8dp"
             android:paddingBottom="24dp" />
 
+        <!-- Nút sửa khoản chi: dùng cho Câu 3 -->
+        <Button
+            android:id="@+id/btnSuaKhoanChi_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sửa khoản chi"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Nút quay lại màn hình chính -->
         <Button
             android:id="@+id/btnQuayLai_245"
             android:layout_width="match_parent"
@@ -78,4 +99,5 @@
             android:text="Quay lại" />
 
     </LinearLayout>
+
 </ScrollView>
