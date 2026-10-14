@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FC"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHỈNH SỬA KHOẢN CHI"
+            android:textColor="#173B70"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên khoản chi"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#263448" />
+
+        <EditText
+            android:id="@+id/edtTenSua_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên khoản chi"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số tiền (VNĐ)"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#263448"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/edtSoTienSua_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số tiền"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ghi chú"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#263448"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/edtGhiChuSua_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập ghi chú (không bắt buộc)"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="2"
+            android:gravity="top"
+            android:layout_marginTop="6dp" />
+
+        <Button
+            android:id="@+id/btnLuuSua_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lưu thay đổi"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/btnHuySua_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>
