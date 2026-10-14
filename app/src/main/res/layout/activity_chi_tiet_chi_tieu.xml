@@ -83,6 +83,34 @@
             android:paddingTop="8dp"
             android:paddingBottom="24dp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trạng thái thanh toán"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#263448"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txtTrangThaiThanhToan_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chưa thanh toán"
+            android:textColor="#B45309"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnDoiTrangThai_245"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đánh dấu đã thanh toán"
+            android:layout_marginBottom="8dp" />
+
+
         <!-- Nút sửa khoản chi: dùng cho Câu 3 -->
         <Button
             android:id="@+id/btnSuaKhoanChi_245"
