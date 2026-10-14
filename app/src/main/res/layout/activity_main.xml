@@ -39,7 +39,7 @@
             android:textColor="#263448" />
 
         <EditText
-            android:id="@+id/edtTenKhoanChi_"
+            android:id="@+id/edtTenKhoanChi_245"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ví dụ: Ăn sáng"
@@ -57,7 +57,7 @@
             android:textColor="#263448" />
 
         <EditText
-            android:id="@+id/edtSoTien_"
+            android:id="@+id/edtSoTien_245"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nhập số tiền"
@@ -75,7 +75,7 @@
             android:textColor="#263448" />
 
         <EditText
-            android:id="@+id/edtGhiChu_"
+            android:id="@+id/edtGhiChu_245"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nhập ghi chú (không bắt buộc)"
@@ -86,7 +86,7 @@
             android:layout_marginBottom="24dp" />
 
         <Button
-            android:id="@+id/btnThemKhoanChi_"
+            android:id="@+id/btnThemKhoanChi_245"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Thêm khoản chi" />
