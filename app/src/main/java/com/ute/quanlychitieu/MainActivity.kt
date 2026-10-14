@@ -1,6 +1,7 @@
 
 package com.ute.quanlychitieu
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -21,12 +22,16 @@ class MainActivity : AppCompatActivity() {
 
         edtTenKhoanChi_245 =
             findViewById(R.id.edtTenKhoanChi_245)
+
         edtSoTien_245 =
             findViewById(R.id.edtSoTien_245)
+
         edtGhiChu_245 =
             findViewById(R.id.edtGhiChu_245)
+
         btnThemKhoanChi_245 =
             findViewById(R.id.btnThemKhoanChi_245)
+
         btnXemChiTiet_245 =
             findViewById(R.id.btnXemChiTiet_245)
 
@@ -35,11 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnXemChiTiet_245.setOnClickListener {
-            Toast.makeText(
-                this,
-                "Chức năng xem chi tiết sẽ được làm ở Câu 2",
-                Toast.LENGTH_SHORT
-            ).show()
+            xemChiTietKhoanChi()
         }
     }
 
@@ -49,9 +50,6 @@ class MainActivity : AppCompatActivity() {
 
         val soTienText =
             edtSoTien_245.text.toString().trim()
-
-        val ghiChu =
-            edtGhiChu_245.text.toString().trim()
 
         if (tenKhoanChi.isEmpty()) {
             edtTenKhoanChi_245.error =
@@ -70,8 +68,7 @@ class MainActivity : AppCompatActivity() {
         val soTien = soTienText.toDoubleOrNull()
 
         if (soTien == null ||
-            soTien.isNaN() ||
-            soTien.isInfinite() ||
+            !soTien.isFinite() ||
             soTien <= 0
         ) {
             edtSoTien_245.error =
@@ -85,8 +82,46 @@ class MainActivity : AppCompatActivity() {
             "Thêm khoản chi thành công!",
             Toast.LENGTH_SHORT
         ).show()
+    }
 
-        // Tạm thời ghi nhận dữ liệu hợp lệ.
-        // Phần quản lý đối tượng KhoanChi sẽ làm ở Câu 4.
+    private fun xemChiTietKhoanChi() {
+        val tenKhoanChi =
+            edtTenKhoanChi_245.text.toString().trim()
+
+        val soTienText =
+            edtSoTien_245.text.toString().trim()
+
+        val ghiChu =
+            edtGhiChu_245.text.toString().trim()
+
+        if (tenKhoanChi.isEmpty()) {
+            edtTenKhoanChi_245.error =
+                "Vui lòng nhập tên khoản chi"
+            edtTenKhoanChi_245.requestFocus()
+            return
+        }
+
+        val soTien = soTienText.toDoubleOrNull()
+
+        if (soTien == null ||
+            !soTien.isFinite() ||
+            soTien <= 0
+        ) {
+            edtSoTien_245.error =
+                "Vui lòng nhập số tiền hợp lệ lớn hơn 0"
+            edtSoTien_245.requestFocus()
+            return
+        }
+
+        val intent = Intent(
+            this,
+            ChiTietChiTieuActivity::class.java
+        ).apply {
+            putExtra("TEN_KHOAN_CHI", tenKhoanChi)
+            putExtra("SO_TIEN", soTien)
+            putExtra("GHI_CHU", ghiChu)
+        }
+
+        startActivity(intent)
     }
 }
